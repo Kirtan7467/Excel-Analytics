@@ -1,0 +1,237 @@
+/* Container */
+.login-container {
+  height: 100vh;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left Panel */
+.login-left-panel {
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+/* Form Wrapper */
+.login-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Logo */
+.login-logo {
+  width: 32px;
+  height: 32px;
+  background: #0d7377;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Form Title */
+.login-form-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* Form Label */
+.login-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Control (Inputs) */
+.login-form-control {
+  padding: 12px 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.login-form-control:focus {
+  border-color: #0d7377;
+  box-shadow: 0 0 0 0.2rem rgba(13, 115, 119, 0.25);
+  outline: none;
+}
+
+/* Password Container */
+.login-password-container {
+  position: relative;
+}
+
+/* Password Input (Adjusted Padding) */
+.login-password-input {
+  padding-right: 45px;
+}
+
+/* Password Toggle */
+.login-password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Submit Button */
+.login-submit-button {
+  background-color: #0d7377;
+  border-color: #0d7377;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.login-submit-button:hover:not(:disabled) {
+  background-color: #0a5d61;
+  border-color: #0a5d61;
+}
+
+/* Signup Link */
+.login-signup-link {
+  color: #0d7377;
+  font-weight: 500;
+}
+
+/* Right Panel */
+.login-right-panel {
+  background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Pattern */
+.login-background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+}
+
+/* Pattern Squares */
+.login-pattern-square {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.login-pattern-square-1 {
+  top: 40px;
+  left: 40px;
+  width: 64px;
+  height: 64px;
+}
+
+.login-pattern-square-2 {
+  top: 80px;
+  right: 80px;
+  width: 48px;
+  height: 48px;
+}
+
+.login-pattern-square-3 {
+  bottom: 128px;
+  left: 64px;
+  width: 32px;
+  height: 32px;
+}
+
+.login-pattern-square-4 {
+  bottom: 64px;
+  right: 128px;
+  width: 80px;
+  height: 80px;
+}
+
+.login-pattern-square-5 {
+  top: 50%;
+  left: 25%;
+  width: 24px;
+  height: 24px;
+}
+
+/* Right Content */
+.login-right-content {
+  z-index: 10;
+}
+
+/* Analytics Card */
+.login-analytics-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 320px;
+}
+
+/* Chart Container */
+.login-chart-container {
+  height: 120px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+/* Active Tab (Yearly Button) */
+.login-active-tab {
+  color: #0d7377;
+  border-bottom: 2px solid #0d7377;
+}
+
+/* Progress Circle */
+.login-progress-circle {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+/* Progress Text */
+.login-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Progress Value */
+.login-progress-value {
+  font-weight: bold;
+  color: #0d7377;
+  font-size: 18px;
+}
+
+/* Right Text */
+.login-right-text {
+  color: #fff;
+}
+
+/* Right Title */
+.login-right-title {
+  font-size: 24px;
+}
+
+/* Right Description */
+.login-right-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}

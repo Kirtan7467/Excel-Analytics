@@ -1,0 +1,273 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f4f6f8;
+  color: #2d3748;
+}
+
+/* Main Container Layout */
+.chart-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar (Assuming AdminSidebar or Sidebar) */
+.AdminSidebar,
+.Sidebar {
+  width: 250px;
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.AdminSidebar h3,
+.Sidebar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.AdminSidebar ul,
+.Sidebar ul {
+  list-style: none;
+}
+
+.AdminSidebar ul li,
+.Sidebar ul li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.AdminSidebar ul li:hover,
+.Sidebar ul li:hover {
+  background: #4a5568;
+}
+
+.AdminSidebar ul li a,
+.Sidebar ul li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Main Content Area */
+.chart-main-content {
+  margin-left: 250px;
+  padding: 2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Title */
+.chart-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2d3748;
+  text-align: center;
+}
+
+/* Message */
+.chart-message {
+  font-size: 1.1rem;
+  color: #718096;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Chart Controls */
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Chart Type Selector */
+.chart-type-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chart-type-selector label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.chart-type-selector select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.chart-type-selector select:focus {
+  outline: none;
+  border-color: #48bb78;
+}
+
+/* Download Buttons */
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button Styles */
+.btn1 {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  white-space: nowrap;
+  min-width: 100px;
+  background: #48bb78; /* Green base color */
+  color: #ffffff;
+  border: 1px solid #38a169; /* Darker green border */
+}
+
+.btn1:hover {
+  background: #38a169; /* Darker green on hover */
+  transform: translateY(-2px);
+}
+
+/* Chart Container */
+.chart-container {
+  position: relative;
+  min-height: 400px;
+  margin-bottom: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.three-d-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.three-d-chart {
+  width: 100%;
+  height: 100%;
+}
+
+/* Back Button */
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  white-space: nowrap;
+  min-width: 100px;
+  background: #0d7377; /* Green base color */
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background: #0d7377; /* Darker green on hover */
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .AdminSidebar,
+  .Sidebar {
+    transform: translateX(-250px);
+  }
+
+  .chart-main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .chart-wrapper {
+    flex-direction: column;
+  }
+
+  .chart-main-content {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-title {
+    font-size: 1.5rem;
+  }
+
+  .chart-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .download-buttons,
+  .chart-type-selector {
+    width: 100%;
+  }
+
+  .btn1 {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .chart-container {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .chart-main-content {
+    padding: 0.5rem;
+  }
+
+  .chart-title {
+    font-size: 1.25rem;
+  }
+
+  .btn1,
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .chart-container {
+    min-height: 250px;
+    padding: 1rem;
+  }
+}

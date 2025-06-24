@@ -1,0 +1,245 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  background: #f4f6f8;
+  color: #2d3748;
+}
+
+/* Layout */
+.history-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar (Shared style for AdminSidebar and Sidebar) */
+.AdminSidebar,
+.Sidebar {
+  width: 250px;
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  transition: transform 0.3s ease;
+}
+
+.AdminSidebar h3,
+.Sidebar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.AdminSidebar ul,
+.Sidebar ul {
+  list-style: none;
+}
+
+.AdminSidebar ul li,
+.Sidebar ul li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.AdminSidebar ul li:hover,
+.Sidebar ul li:hover {
+  background: #4a5568;
+}
+
+.AdminSidebar ul li a,
+.Sidebar ul li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Main Content */
+.history-main {
+  margin-left: 250px;
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2d3748;
+}
+
+/* Status messages */
+p {
+  font-size: 1.1rem;
+  color: #718096;
+  text-align: center;
+}
+
+.error-text {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* History list */
+.history-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.history-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.history-card div {
+  flex: 1;
+}
+
+.history-card p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #4a5568;
+}
+
+.history-card p strong {
+  color: #2d3748;
+  margin-right: 0.5rem;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.btn1,
+.reopen-btn1,
+.delete-btn1 {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.reopen-btn {
+  background: #48bb78;
+  color: #ffffff;
+}
+
+.reopen-btn:hover {
+  background: #38a169;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: #ffffff;
+  margin-top: 0 !important;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .AdminSidebar,
+  .Sidebar {
+    transform: translateX(-250px);
+  }
+
+  .history-main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .history-container {
+    flex-direction: column;
+  }
+
+  .history-main {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .history-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn1,
+  .reopen-btn1,
+  .delete-btn1 {
+    width: 100%;
+    max-width: 120px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .history-main {
+    padding: 0.5rem;
+  }
+
+  .history-card p {
+    font-size: 0.9rem;
+  }
+
+  .btn1,
+  .reopen-btn1,
+  .delete-btn1 {
+    font-size: 0.9rem;
+    height: 36px;
+    padding: 0.25rem 0.75rem;
+  }
+}

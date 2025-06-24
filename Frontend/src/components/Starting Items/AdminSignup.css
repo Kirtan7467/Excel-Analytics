@@ -1,0 +1,237 @@
+/* Container */
+.admin-signup-container {
+  height: 100vh;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left Panel */
+.admin-signup-left-panel {
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+/* Form Wrapper */
+.admin-signup-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Logo */
+.admin-signup-logo {
+  width: 32px;
+  height: 32px;
+  background: #0d7377;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Form Title */
+.admin-signup-form-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* Form Label */
+.admin-signup-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Control (Inputs) */
+.admin-signup-form-control {
+  padding: 12px 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.admin-signup-form-control:focus {
+  border-color: #0d7377;
+  box-shadow: 0 0 0 0.2rem rgba(13, 115, 119, 0.25);
+  outline: none;
+}
+
+/* Password Container */
+.admin-signup-password-container {
+  position: relative;
+}
+
+/* Password Input (Adjusted Padding) */
+.admin-signup-password-input {
+  padding-right: 45px;
+}
+
+/* Password Toggle */
+.admin-signup-password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Submit Button */
+.admin-signup-submit-button {
+  background-color: #0d7377;
+  border-color: #0d7377;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.admin-signup-submit-button:hover:not(:disabled) {
+  background-color: #0a5d61;
+  border-color: #0a5d61;
+}
+
+/* Login Link */
+.admin-signup-login-link {
+  color: #0d7377;
+  font-weight: 500;
+}
+
+/* Right Panel */
+.admin-signup-right-panel {
+  background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Pattern */
+.admin-signup-background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+}
+
+/* Pattern Squares */
+.admin-signup-pattern-square {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.admin-signup-pattern-square-1 {
+  top: 40px;
+  left: 40px;
+  width: 64px;
+  height: 64px;
+}
+
+.admin-signup-pattern-square-2 {
+  top: 80px;
+  right: 80px;
+  width: 48px;
+  height: 48px;
+}
+
+.admin-signup-pattern-square-3 {
+  bottom: 128px;
+  left: 64px;
+  width: 32px;
+  height: 32px;
+}
+
+.admin-signup-pattern-square-4 {
+  bottom: 64px;
+  right: 128px;
+  width: 80px;
+  height: 80px;
+}
+
+.admin-signup-pattern-square-5 {
+  top: 50%;
+  left: 25%;
+  width: 24px;
+  height: 24px;
+}
+
+/* Right Content */
+.admin-signup-right-content {
+  z-index: 10;
+}
+
+/* Analytics Card */
+.admin-signup-analytics-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 320px;
+}
+
+/* Chart Container */
+.admin-signup-chart-container {
+  height: 120px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+/* Active Tab (Yearly Button) */
+.admin-signup-active-tab {
+  color: #0d7377;
+  border-bottom: 2px solid #0d7377;
+}
+
+/* Progress Circle */
+.admin-signup-progress-circle {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+/* Progress Text */
+.admin-signup-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Progress Value */
+.admin-signup-progress-value {
+  font-weight: bold;
+  color: #0d7377;
+  font-size: 18px;
+}
+
+/* Right Text */
+.admin-signup-right-text {
+  color: #fff;
+}
+
+/* Right Title */
+.admin-signup-right-title {
+  font-size: 24px;
+}
+
+/* Right Description */
+.admin-signup-right-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}

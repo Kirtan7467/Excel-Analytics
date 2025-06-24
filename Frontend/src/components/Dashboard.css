@@ -1,0 +1,459 @@
+/* Root styles for light and dark themes */
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden; /* Prevent overall page overflow */
+}
+
+.dashboard-wrapper.light {
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  color: #1f2937;
+}
+
+.dashboard-wrapper.dark {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: #e5e7eb;
+}
+
+/* Main content */
+.dashboard-main-content {
+  margin-left: 250px; /* Matches sidebar width */
+  flex: 1;
+  padding: 2.5rem; /* Increased padding for better spacing */
+  overflow-y: auto; /* Allow vertical scrolling within the main content */
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  max-height: 100vh; /* Ensure main content doesn't exceed viewport height */
+  box-sizing: border-box;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem; /* Increased margin for better section separation */
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap for better spacing on smaller screens */
+}
+
+.dashboard-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  position: relative;
+  margin: 0; /* Reset default margins */
+}
+
+.dashboard-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #0d7377;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1.25rem; /* Slightly increased gap for better spacing */
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0.75rem; /* Increased padding for better click area */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.light .theme-toggle {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #1f2937;
+}
+
+.dark .theme-toggle {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e5e7eb;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(13, 115, 119, 0.2);
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem; /* Increased margin for better section separation */
+}
+
+.stats-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem; /* Increased padding for better spacing inside the card */
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+    -5px -5px 15px rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .stats-card {
+  background: #374151;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+}
+
+.dark .stats-card:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4),
+    -8px -8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.stats-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem; /* Increased margin for better spacing */
+}
+
+.stats-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0d7377;
+}
+
+/* Action Section (Now only contains search bar) */
+.action-section {
+  display: flex;
+  justify-content: flex-end; /* Align search bar to the right */
+  align-items: center;
+  margin-bottom: 2.5rem; /* Increased margin for better section separation */
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap for consistency */
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 400px;
+  width: 100%; /* Ensure search bar takes full width on smaller screens */
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.875rem 1.25rem; /* Increased padding for better input field appearance */
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.light .search-input {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+.dark .search-input {
+  background-color: #374151;
+  color: #e5e7eb;
+  border-color: #4b5563;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0d7377;
+  box-shadow: 0 0 0 2px rgba(13, 115, 119, 0.2);
+}
+
+/* Files Section */
+.files-section {
+  margin-bottom: 2.5rem; /* Increased margin for better section separation */
+  flex: 1; /* Allow section to grow but not overflow */
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.75rem; /* Increased margin for better spacing */
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #0d7377;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.files-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.75rem; /* Increased gap for better card separation */
+  max-height: 50vh; /* Limit grid height to prevent overflow */
+  overflow-y: auto; /* Allow scrolling within the grid if needed */
+  padding: 10px;
+}
+
+.file-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.75rem; /* Increased padding for better spacing inside the card */
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+    -5px -5px 15px rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 220px; /* Slightly increased for better card appearance */
+  cursor: pointer; /* Indicate the card is clickable */
+}
+
+.dark .file-card {
+  background: #374151;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.file-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+}
+
+.dark .file-card:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4),
+    -8px -8px 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Add File Card */
+.add-file-card {
+  background: rgba(
+    13,
+    115,
+    119,
+    0.05
+  ); /* Light background with primary color tint */
+  border: 2px dashed #0d7377; /* Dashed border for distinction */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark .add-file-card {
+  background: rgba(13, 115, 119, 0.1);
+  border-color: #0a5a5e;
+}
+
+.add-file-card:hover {
+  transform: scale(1.05); /* Slightly larger scale on hover */
+  background: rgba(13, 115, 119, 0.1);
+}
+
+.dark .add-file-card:hover {
+  background: rgba(13, 115, 119, 0.2);
+}
+
+.add-file-icon {
+  color: #0d7377;
+  margin-bottom: 1.25rem; /* Increased margin for better spacing */
+  transition: color 0.3s ease;
+}
+
+.add-file-card:hover .add-file-icon {
+  color: #0a5a5e;
+}
+
+.card-icon {
+  color: #0d7377;
+  margin-bottom: 1.25rem; /* Increased margin for better spacing */
+}
+
+.file-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem; /* Adjusted margin for better spacing */
+  word-break: break-word; /* Prevent long filenames from overflowing */
+}
+
+.file-meta {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1.25rem; /* Increased margin for better spacing */
+}
+
+.dark .file-meta {
+  color: #9ca3af;
+}
+
+.action-button {
+  padding: 0.875rem 1.75rem; /* Increased padding for better button appearance */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Increased gap for better spacing */
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.generate-chart {
+  background-color: #34d399;
+  color: #ffffff;
+}
+
+.generate-chart:hover {
+  background-color: #2bb981;
+  transform: translateY(-2px);
+}
+
+/* No Data Text */
+.no-data-text {
+  font-size: 1.1rem;
+  color: #6b7280;
+  text-align: center;
+  grid-column: 1 / -1; /* Span across all columns */
+  margin-top: 1.5rem; /* Increased margin for better spacing */
+}
+
+.dark .no-data-text {
+  color: #9ca3af;
+}
+
+.history-section {
+  margin-top: 40px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-card {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-main-content {
+    margin-left: 200px;
+    padding: 2rem 1.5rem; /* Adjusted padding for smaller screens */
+  }
+
+  .dashboard-title {
+    font-size: 1.75rem;
+  }
+
+  .dashboard-title::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .action-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar {
+    max-width: none;
+  }
+
+  .files-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem; /* Adjusted gap for smaller screens */
+    max-height: 40vh; /* Adjust height for smaller screens */
+    padding-right: 0.5rem; /* Adjusted padding for scrollbar */
+  }
+
+  .file-card {
+    padding: 1.5rem; /* Adjusted padding for smaller screens */
+    min-height: 200px; /* Adjusted height for smaller screens */
+  }
+
+  .action-button {
+    padding: 0.75rem 1.25rem; /* Adjusted padding for smaller screens */
+    font-size: 0.9rem;
+  }
+
+  .stats-card {
+    padding: 1.5rem; /* Adjusted padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-main-content {
+    margin-left: 60px;
+    padding: 1.5rem 1rem; /* Further adjusted padding for mobile */
+  }
+
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-title::after {
+    width: 40px;
+    height: 2px;
+  }
+
+  .stats-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .stats-value {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .files-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem; /* Further adjusted gap for mobile */
+    max-height: 35vh;
+    padding-right: 0.25rem; /* Further adjusted padding for scrollbar */
+  }
+
+  .file-card {
+    padding: 1.25rem; /* Further adjusted padding for mobile */
+    min-height: 180px;
+  }
+
+  .action-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .stats-card {
+    padding: 1.25rem; /* Further adjusted padding for mobile */
+  }
+
+  .card-icon,
+  .add-file-icon {
+    margin-bottom: 1rem; /* Adjusted margin for mobile */
+  }
+
+  .file-meta {
+    margin-bottom: 1rem; /* Adjusted margin for mobile */
+  }
+}

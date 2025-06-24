@@ -1,0 +1,203 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f4f6f8;
+  color: #2d3748;
+}
+
+/* Main Container Layout */
+div[style] {
+  display: flex;
+}
+
+/* Sidebar (AdminSidebar or Sidebar) */
+.AdminSidebar,
+.Sidebar {
+  width: 250px;
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.AdminSidebar h3,
+.Sidebar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.AdminSidebar ul,
+.Sidebar ul {
+  list-style: none;
+}
+
+.AdminSidebar ul li,
+.Sidebar ul li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.AdminSidebar ul li:hover,
+.Sidebar ul li:hover {
+  background: #4a5568;
+}
+
+.AdminSidebar ul li a,
+.Sidebar ul li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Main Content Area */
+.user-content {
+  margin-left: 250px;
+  padding: 2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.user-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2d3748;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* User Card */
+.user-card {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* User Header */
+.user-header {
+  margin-bottom: 1.5rem;
+}
+
+.user-icon {
+  color: #48bb78;
+  margin-bottom: 1rem;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+/* User Details */
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  border-left: 4px solid #48bb78;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.detail-value {
+  font-weight: 400;
+  color: #2d3748;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .AdminSidebar,
+  .Sidebar {
+    transform: translateX(-250px);
+  }
+
+  .user-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  div[style] {
+    flex-direction: column;
+  }
+
+  .user-content {
+    margin-top: 60px;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-title {
+    font-size: 1.5rem;
+  }
+
+  .user-card {
+    padding: 1.5rem;
+  }
+
+  .user-name {
+    font-size: 1.25rem;
+  }
+
+  .detail-item {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .user-content {
+    padding: 0.5rem;
+  }
+
+  .user-card {
+    padding: 1rem;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    text-align: left;
+    gap: 0.25rem;
+  }
+}

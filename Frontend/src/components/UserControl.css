@@ -1,0 +1,206 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, sans-serif;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #333;
+}
+
+/* Main Container Layout */
+.main-contain {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Admin Sidebar */
+.AdminSidebar {
+  width: 250px;
+  background: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.AdminSidebar h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.AdminSidebar ul {
+  list-style: none;
+}
+
+.AdminSidebar ul li {
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.AdminSidebar ul li:hover {
+  background: #34495e;
+}
+
+.AdminSidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* User Control Container */
+.user-control-container {
+  margin-left: 250px;
+  padding: 2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Title */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading and Error States */
+p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+.error-text {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* User List */
+.user-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* User Card */
+.user-cards {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px; /* Fixed width */
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* User Details */
+.user-details {
+  flex-grow: 1;
+}
+
+.user-details p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.user-details p strong {
+  color: #2c3e50;
+  margin-right: 0.5rem;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #dc3545;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .AdminSidebar {
+    transform: translateX(-250px);
+  }
+
+  .user-control-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .main-contain {
+    flex-direction: column;
+  }
+
+  .user-control-container {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-list {
+    justify-content: center; /* Center cards on smaller screens */
+  }
+
+  .user-card {
+    width: 100%; /* Full width on tablets */
+    max-width: 300px; /* Maintain max width */
+    margin: 0 auto; /* Center the card */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .user-control-container {
+    padding: 0.5rem;
+  }
+
+  .user-details p {
+    font-size: 0.9rem;
+  }
+
+  .delete-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

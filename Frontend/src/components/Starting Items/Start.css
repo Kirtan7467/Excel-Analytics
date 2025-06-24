@@ -1,0 +1,287 @@
+/* Container */
+.start-container {
+  height: 100vh;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left Panel */
+.start-left-panel {
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+/* Form Wrapper */
+.start-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Logo */
+.start-logo {
+  width: 32px;
+  height: 32px;
+  background: #0d7377;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Form Title */
+.start-form-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Subtitle */
+.start-form-subtitle {
+  font-size: 16px;
+  color: #495057;
+  margin-bottom: 2rem;
+}
+
+/* Role Cards Container */
+.start-role-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Role Card */
+.start-role-card {
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.start-role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #0d7377;
+}
+
+.start-role-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.start-role-card p {
+  font-size: 14px;
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.start-role-card-icon {
+  font-size: 32px;
+}
+
+/* Role Links */
+.start-role-links {
+  text-align: center;
+}
+
+/* Role Links Title */
+.start-role-links-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+/* Action Buttons Container */
+.start-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Action Button */
+.start-action-button {
+  background-color: #0d7377;
+  border-color: #0d7377;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.start-action-button:hover:not(:disabled) {
+  background-color: #0a5d61;
+  border-color: #0a5d61;
+}
+
+/* Right Panel */
+.start-right-panel {
+  background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Pattern */
+.start-background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+}
+
+/* Pattern Squares */
+.start-pattern-square {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.start-pattern-square-1 {
+  top: 40px;
+  left: 40px;
+  width: 64px;
+  height: 64px;
+}
+
+.start-pattern-square-2 {
+  top: 80px;
+  right: 80px;
+  width: 48px;
+  height: 48px;
+}
+
+.start-pattern-square-3 {
+  bottom: 128px;
+  left: 64px;
+  width: 32px;
+  height: 32px;
+}
+
+.start-pattern-square-4 {
+  bottom: 64px;
+  right: 128px;
+  width: 80px;
+  height: 80px;
+}
+
+.start-pattern-square-5 {
+  top: 50%;
+  left: 25%;
+  width: 24px;
+  height: 24px;
+}
+
+/* Right Content */
+.start-right-content {
+  z-index: 10;
+}
+
+/* Right Panel Logo Wrapper */
+.start-right-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Right Panel Logo */
+.start-right-logo {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d7377;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Analytics Card */
+.start-analytics-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 320px;
+}
+
+/* Chart Container */
+.start-chart-container {
+  height: 120px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+/* Active Tab (Yearly Button) */
+.start-active-tab {
+  color: #0d7377;
+  border-bottom: 2px solid #0d7377;
+}
+
+/* Progress Circle */
+.start-progress-circle {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+/* Progress Text */
+.start-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Progress Value */
+.start-progress-value {
+  font-weight: bold;
+  color: #0d7377;
+  font-size: 18px;
+}
+
+/* Right Text */
+.start-right-text {
+  color: #fff;
+}
+
+/* Right Title */
+.start-right-title {
+  font-size: 24px;
+}
+
+/* Right Description */
+.start-right-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.profile-img-circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img-circle:hover {
+  transform: scale(1.05);
+}
