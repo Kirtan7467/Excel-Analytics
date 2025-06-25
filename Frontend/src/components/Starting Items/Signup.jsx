@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+import { Link, useNavigate } from "react-router-dom"; 
 import "./Signup.css";
 
 function Signup() {
@@ -15,7 +15,7 @@ function Signup() {
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState("");
 
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const handleSuccess = (msg) => {
     setMessage(msg);
@@ -81,11 +81,10 @@ function Signup() {
 
       if (success) {
         handleSuccess(`${message} (User)`);
-        // Store the token in localStorage
         localStorage.setItem("token", token);
         setTimeout(() => {
           console.log("Redirecting to dashboard...");
-          navigate("/dashboard"); // Redirect to Dashboard.jsx
+          navigate("/dashboard"); 
         }, 1000);
       } else {
         handleError(message || "Signup failed");
