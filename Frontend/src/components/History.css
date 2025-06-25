@@ -141,8 +141,8 @@ p {
 }
 
 .btn1,
-.reopen-btn1,
-.delete-btn1 {
+.reopen-btn,
+.delete-btn {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 6px;
