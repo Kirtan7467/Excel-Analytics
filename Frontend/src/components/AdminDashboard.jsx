@@ -35,16 +35,14 @@ function AdminDashboard() {
       }
 
       try {
-        // File count
         const countRes = await fetch("https://excel-analytics-srom.onrender.com/api/excel/count", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const countData = await countRes.json();
         if (countData.success) setFileCount(countData.count || 0);
 
-        // File list
         const filesRes = await fetch(
-          "http://localhost:8080/api/get-excel-data",
+          "https://excel-analytics-srom.onrender.com/api/get-excel-data",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -52,9 +50,8 @@ function AdminDashboard() {
         const filesData = await filesRes.json();
         if (filesData.success) setFiles(filesData.data || []);
 
-        // Chart history
         const historyRes = await fetch(
-          "http://localhost:8080/api/get-analysis-history",
+          "https://excel-analytics-srom.onrender.com/api/get-analysis-history",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -65,7 +62,6 @@ function AdminDashboard() {
           setHistoryCount(historyData.data.length || 0);
         }
 
-        // Total users
         const userRes = await fetch(
           "https://excel-analytics-srom.onrender.com/api/admin/user/count",
           {
