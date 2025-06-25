@@ -15,10 +15,8 @@ function User() {
 
   return (
     <div style={{ height: "100vh", display: "flex" }}>
-      {/* Sidebar based on role */}
       <SidebarComponent />
 
-      {/* Main Content Area */}
       <div className="user-content">
         <h1 className="user-title">
           {role === "admin" ? "Admin" : "User"} Profile
