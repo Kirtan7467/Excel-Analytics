@@ -52,7 +52,7 @@ function AdminSignup() {
     setIsLoading(true);
 
     try {
-      const url = "http://localhost:8080/auth/admin-signup";
+      const url = "https://excel-analytics-srom.onrender.com/auth/admin-signup";
       const response = await fetch(url, {
         method: "POST",
         headers: {
