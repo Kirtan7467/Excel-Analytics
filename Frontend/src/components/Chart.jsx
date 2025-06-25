@@ -284,12 +284,17 @@ function Chart() {
             </select>
           </div>
           <div className="download-buttons">
-            <button onClick={downloadChartAsPNG}>Download PNG</button>
-            <button onClick={downloadChartAsPDF}>Download PDF</button>
+            <button className="button1" onClick={downloadChartAsPNG}>
+              Download PNG
+            </button>
+            <button className="button1" onClick={downloadChartAsPDF}>
+              Download PDF
+            </button>
           </div>
         </div>
         <div className="chart-container">{renderChart()}</div>
         <button
+          className="button1"
           onClick={() => navigate(role === "admin" ? "/admin-files" : "/files")}
         >
           Back to Files

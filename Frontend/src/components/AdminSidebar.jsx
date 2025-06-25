@@ -8,8 +8,8 @@ import {
   Clock,
   LogOut,
   ShieldCheck,
-} from "lucide-react"; 
-import "./Sidebar.css"; 
+} from "lucide-react";
+import "./Sidebar.css";
 
 function AdminSidebar() {
   const location = useLocation();
