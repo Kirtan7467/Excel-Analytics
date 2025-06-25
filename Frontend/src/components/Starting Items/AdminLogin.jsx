@@ -64,7 +64,7 @@ function AdminLogin() {
       if (success) {
         handleSuccess(`${message} (Admin)`);
         localStorage.setItem("token", token);
-        localStorage.setItem("userRole", "admin"); // or "user" for normal users
+        localStorage.setItem("userRole", "admin"); 
         localStorage.setItem("userName", name || "User");
         localStorage.setItem("userEmail", email || "Email");
         setTimeout(() => {
