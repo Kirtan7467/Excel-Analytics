@@ -58,7 +58,7 @@ function Signup() {
     setIsLoading(true);
 
     try {
-      const url = "http://localhost:8080/auth/signup";
+      const url = "https://excel-analytics-srom.onrender.com/auth/signup";
       const response = await fetch(url, {
         method: "POST",
         headers: {
