@@ -32,7 +32,7 @@ function Files() {
         }
 
         const response = await fetch(
-          `http://localhost:8080/api/get-excel-data`,
+          `https://excel-analytics-srom.onrender.com/api/get-excel-data`,
           {
             method: "GET",
             headers: {
@@ -112,7 +112,7 @@ function Files() {
       const userId = decoded.id || decoded._id || decoded.userId;
 
       const response = await fetch(
-        `http://localhost:8080/api/upload-excel/${userId}`,
+        `https://excel-analytics-srom.onrender.com/api/upload-excel/${userId}`,
         {
           method: "POST",
           headers: {
@@ -136,7 +136,7 @@ function Files() {
       if (result.success) {
         handleSuccess("File uploaded successfully!");
         const fetchResponse = await fetch(
-          "http://localhost:8080/api/get-excel-data",
+          "https://excel-analytics-srom.onrender.com/api/get-excel-data",
           {
             method: "GET",
             headers: {
@@ -181,7 +181,7 @@ function Files() {
       }
 
       const response = await fetch(
-        `http://localhost:8080/api/get-excel-data/${fileId}`,
+        `https://excel-analytics-srom.onrender.com/api/get-excel-data/${fileId}`,
         {
           method: "GET",
           headers: {
@@ -243,7 +243,7 @@ function Files() {
       }
 
       const response = await fetch(
-        `http://localhost:8080/api/delete-excel/${selectedFile._id}`,
+        `https://excel-analytics-srom.onrender.com/api/delete-excel/${selectedFile._id}`,
         {
           method: "DELETE",
           headers: {
@@ -358,7 +358,7 @@ function Files() {
     const token = localStorage.getItem("token");
 
     try {
-      await fetch("http://localhost:8080/api/log-analysis-action", {
+      await fetch("https://excel-analytics-srom.onrender.com/api/log-analysis-action", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
