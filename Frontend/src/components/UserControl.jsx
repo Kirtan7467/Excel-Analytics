@@ -17,7 +17,7 @@ const UserControl = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:8080/api/admin/get-users", {
+      const res = await fetch("https://excel-analytics-srom.onrender.com/api/admin/get-users", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -74,7 +74,7 @@ const UserControl = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:8080/api/admin/delete-user/${userId}`,
+        `https://excel-analytics-srom.onrender.com/api/admin/delete-user/${userId}`,
         {
           method: "DELETE",
           headers: {
@@ -91,7 +91,7 @@ const UserControl = () => {
 
       if (result.success) {
         setUsers(users.filter((user) => user._id !== userId));
-        setError(""); // Clear error on success
+        setError(""); 
       } else {
         setError(result.message || "Failed to delete user.");
       }

@@ -47,7 +47,7 @@ function AdminLogin() {
     setIsLoading(true);
 
     try {
-      const url = "http://localhost:8080/auth/admin-login";
+      const url = "https://excel-analytics-srom.onrender.com/auth/admin-login";
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -64,7 +64,7 @@ function AdminLogin() {
       if (success) {
         handleSuccess(`${message} (Admin)`);
         localStorage.setItem("token", token);
-        localStorage.setItem("userRole", "admin"); // or "user" for normal users
+        localStorage.setItem("userRole", "admin"); 
         localStorage.setItem("userName", name || "User");
         localStorage.setItem("userEmail", email || "Email");
         setTimeout(() => {

@@ -6,7 +6,7 @@ import "./Sidebar.css";
 function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const role = localStorage.getItem("role"); // "admin" or "user"
+  const role = localStorage.getItem("role"); 
 
   const handleLogout = () => {
     localStorage.clear();

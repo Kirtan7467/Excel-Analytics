@@ -142,7 +142,7 @@ function Chart() {
       try {
         const token = localStorage.getItem("token");
         const res = await fetch(
-          `http://localhost:8080/api/get-excel-data/${fileId}`,
+          `https://excel-analytics-srom.onrender.com/api/get-excel-data/${fileId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

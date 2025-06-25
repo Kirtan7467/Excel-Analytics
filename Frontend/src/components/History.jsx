@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import AdminSidebar from "./AdminSidebar"; // ✅ Import admin sidebar
+import AdminSidebar from "./AdminSidebar"; 
 import "./History.css";
 
 const History = () => {
@@ -9,9 +9,8 @@ const History = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const role = localStorage.getItem("userRole"); // "admin" or "user"
+  const role = localStorage.getItem("userRole"); 
 
-  // Dynamically decide which sidebar to show
   const SidebarComponent = role === "admin" ? AdminSidebar : Sidebar;
 
   useEffect(() => {
@@ -25,7 +24,7 @@ const History = () => {
 
       try {
         const res = await fetch(
-          "http://localhost:8080/api/get-analysis-history",
+          "https://excel-analytics-srom.onrender.com/api/get-analysis-history",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -58,12 +57,11 @@ const History = () => {
       return;
     }
 
-    // Fetch fileName if missing
     if (!fileName) {
       try {
         const token = localStorage.getItem("token");
         const res = await fetch(
-          `http://localhost:8080/api/get-file/${fileId}`,
+          `https://excel-analytics-srom.onrender.com/api/get-file/${fileId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -100,7 +98,7 @@ const History = () => {
     const token = localStorage.getItem("token");
     try {
       const res = await fetch(
-        `http://localhost:8080/api/delete-analysis-history/${fileId}/${entryId}`,
+        `https://excel-analytics-srom.onrender.com/api/delete-analysis-history/${fileId}/${entryId}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
@@ -121,7 +119,7 @@ const History = () => {
 
   return (
     <div className="history-container">
-      <SidebarComponent /> {/* ✅ Conditionally rendered sidebar */}
+      <SidebarComponent /> 
       <div className="history-main">
         <h2>{role === "admin" ? "Admin" : "User"} Analysis History</h2>
         {loading ? (

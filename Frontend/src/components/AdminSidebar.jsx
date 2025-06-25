@@ -8,8 +8,8 @@ import {
   Clock,
   LogOut,
   ShieldCheck,
-} from "lucide-react"; // Added ShieldCheck for user control icon
-import "./Sidebar.css"; // Reuse same styles
+} from "lucide-react"; 
+import "./Sidebar.css"; 
 
 function AdminSidebar() {
   const location = useLocation();
