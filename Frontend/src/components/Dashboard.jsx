@@ -26,10 +26,9 @@ function Dashboard() {
           return;
         }
 
-        // Fetch total file count
         try {
           const countRes = await fetch(
-            "http://localhost:8080/api/excel/count",
+            "https://excel-analytics-srom.onrender.com/api/excel/count",
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -41,10 +40,9 @@ function Dashboard() {
           setFileCount(0);
         }
 
-        // Fetch uploaded files
         try {
           const filesRes = await fetch(
-            "http://localhost:8080/api/get-excel-data",
+            "https://excel-analytics-srom.onrender.com/api/get-excel-data",
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -60,10 +58,9 @@ function Dashboard() {
           setFiles([]);
         }
 
-        // Fetch analysis history
         try {
           const historyRes = await fetch(
-            "http://localhost:8080/api/get-analysis-history",
+            "https://excel-analytics-srom.onrender.com/api/get-analysis-history",
             {
               headers: { Authorization: `Bearer ${token}` },
             }
