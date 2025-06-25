@@ -44,7 +44,7 @@ function DataView() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/get-excel-data/${id}`
+          `https://excel-analytics-srom.onrender.com/api/get-excel-data/${id}`
         );
         const result = await response.json();
         if (result.success) {
