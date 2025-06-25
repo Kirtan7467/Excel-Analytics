@@ -178,7 +178,7 @@ body {
 }
 
 /* Back Button */
-button {
+.button1 {
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 6px;
@@ -195,7 +195,7 @@ button {
   margin: 0 auto;
 }
 
-button:hover {
+.button1:hover {
   background: #0d7377; /* Darker green on hover */
   transform: translateY(-2px);
 }
