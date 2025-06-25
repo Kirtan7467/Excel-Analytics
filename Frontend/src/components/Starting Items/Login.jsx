@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Eye, EyeOff } from "lucide-react"; // Import icons for password toggle
+import { Eye, EyeOff } from "lucide-react"; 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./Login.css"; // Import the new CSS file
+import "./Login.css"; 
 
 function Login() {
   const [loginInfo, setLoginInfo] = useState({
@@ -63,7 +63,6 @@ function Login() {
         localStorage.setItem("token", token);
         localStorage.setItem("userName", name || "User");
         localStorage.setItem("userEmail", email || "Email");
-        // localStorage.setItem("token", response.token);
         localStorage.setItem("userRole", "user");
 
         setTimeout(() => {
