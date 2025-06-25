@@ -36,7 +36,7 @@ function AdminDashboard() {
 
       try {
         // File count
-        const countRes = await fetch("http://localhost:8080/api/excel/count", {
+        const countRes = await fetch("https://excel-analytics-srom.onrender.com/api/excel/count", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const countData = await countRes.json();
@@ -67,7 +67,7 @@ function AdminDashboard() {
 
         // Total users
         const userRes = await fetch(
-          "http://localhost:8080/api/admin/user/count",
+          "https://excel-analytics-srom.onrender.com/api/admin/user/count",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
