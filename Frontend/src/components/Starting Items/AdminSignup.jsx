@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Eye, EyeOff } from "lucide-react"; // Import icons for password toggle
+import { Eye, EyeOff } from "lucide-react"; 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./AdminSignup.css"; // Updated CSS file to match Signup theme
+import "./AdminSignup.css"; 
 
 function AdminSignup() {
   const [signupInfo, setSignupInfo] = useState({
@@ -100,11 +100,8 @@ function AdminSignup() {
                 </div>
               </div>
 
-              {/* Form */}
               <div>
                 <h1 className="admin-signup-form-title">Admin Signup</h1>
-
-                {/* Toast Notifications are handled by ToastContainer */}
                 <form onSubmit={handleSignup}>
                   <div className="mb-3">
                     <label className="form-label admin-signup-form-label">
