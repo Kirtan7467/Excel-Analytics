@@ -47,7 +47,7 @@ function AdminLogin() {
     setIsLoading(true);
 
     try {
-      const url = "http://localhost:8080/auth/admin-login";
+      const url = "https://excel-analytics-srom.onrender.com/auth/admin-login";
       const response = await fetch(url, {
         method: "POST",
         headers: {
